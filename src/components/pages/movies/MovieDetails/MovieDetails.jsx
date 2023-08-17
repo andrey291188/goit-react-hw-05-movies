@@ -12,7 +12,7 @@ const MovieDetails = () => {
   const [loader, setLoader] = useState(false);
   const [errors, setErrors] = useState(false);
   const location = useLocation();
-  const backLocationRefs = useRef(location.state) ?? "/";
+  const backLocationRefs = useRef(location.state ?? "/") ;
   const defaultImg =
     'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png';
 
