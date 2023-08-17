@@ -11,7 +11,7 @@ p {
 }
 
 .headers {
-  max-width: 1200px;
+ 
   height: 50px;
   background-color: slategray;
   display: flex;
