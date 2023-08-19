@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Loader } from 'components/loader/Loader';
-import reviewsRequest from 'service/reviewsRequest';
-import css from "../../../../styles.module.css"
+import reviewsRequest from '../../../../service/reviewsRequest';
+import css from "../../../../components/styles.module.css"
 
 const Reviews = () => {
   const { movieId } = useParams();

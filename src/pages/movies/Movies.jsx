@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useSearchParams } from 'react-router-dom';
-import css from '../../styles.module.css';
-import searchMovies from 'service/searchMovie';
+import { useSearchParams } from 'react-router-dom';
+import css from '../../components/styles.module.css';
+import searchMovies from '../../service/searchMovie';
 import { Loader } from 'components/loader/Loader';
 import MovieItemList from 'components/MovieItemList/MovieItemList';
 
@@ -12,7 +12,6 @@ const Movies = () => {
   const [dataMovie, setDataMovie] = useState([]);
   const [loader, setLoader] = useState(false)
   const [errors, setErrors] = useState(false)
-  const location = useLocation()
 
   useEffect(() => {
     if (query === '') {
@@ -25,6 +24,7 @@ const Movies = () => {
     setLoader(true)
     try {
       const response = await searchMovies(text);
+      console.log(response)
       if (!response.results.length) {
         return alert('Sorry, no results were found for your search');
       }
@@ -65,7 +65,7 @@ const Movies = () => {
       <ul>
         {loader && <Loader/>}
         {dataMovie.length > 0 && dataMovie.map(({ id, title, name }) => (
-          <MovieItemList key={id} id={`${id}`} title={title || name} location={location}/>
+          <MovieItemList key={id} id={`${id}`} title={title || name} />
         ))}
         {errors && <p>Sorry something went wrong, try again</p>}
       </ul>

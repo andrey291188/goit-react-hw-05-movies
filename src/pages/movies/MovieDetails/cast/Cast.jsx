@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import creditsRequest from 'service/creditsRequest';
-import css from '../../../../styles.module.css';
+import creditsRequest from '../../../../service/creditsRequest';
+import css from '../../../../components/styles.module.css';
 import CastItemList from 'components/CastItemList/CastItemList';
 import { Loader } from 'components/loader/Loader';
 

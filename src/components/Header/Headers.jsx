@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { styled } from "styled-components"
-import css from "../../styles.module.css"
+import css from "../../components/styles.module.css"
 
 const StayledLink = styled(NavLink)`
     &.active {

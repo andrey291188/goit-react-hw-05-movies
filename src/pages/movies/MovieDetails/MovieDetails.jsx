@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
-import css from '../../../styles.module.css';
-import detailsRequest from 'service/detailsRequest';
+import css from '../../../components/styles.module.css';
+import detailsRequest from '../../../service/detailsRequest';
 import { useRef } from 'react';
 import { Loader } from 'components/loader/Loader';
 import { Suspense } from 'react';
